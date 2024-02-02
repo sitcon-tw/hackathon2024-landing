@@ -90,7 +90,8 @@ const styles = (theme) => ({
 });
 
 function HeadSection(props) {
-  const { classes, theme, width } = props;
+  // const { classes, theme, width } = props;
+  const { classes } = props;
   return (
     <Fragment>
       <ZoomImage

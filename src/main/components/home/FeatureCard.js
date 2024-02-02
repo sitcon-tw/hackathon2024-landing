@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import PropTypes from "prop-types";
-import { Typography, withStyles, List, ListItem, ListItemText } from "@material-ui/core";
+// import { Typography, withStyles, List, ListItem, ListItemText } from "@material-ui/core";
+import { Typography, withStyles } from "@material-ui/core";
 
 const styles = theme => ({
   iconWrapper: {

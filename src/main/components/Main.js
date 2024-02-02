@@ -5,8 +5,8 @@ import { withStyles } from "@material-ui/core";
 import NavBar from "./navigation/NavBar";
 import Footer from "./footer/Footer";
 import "aos/dist/aos.css";
-import CookieRulesDialog from "./cookies/CookieRulesDialog";
-import CookieConsent from "./cookies/CookieConsent";
+// import CookieRulesDialog from "./cookies/CookieRulesDialog";
+// import CookieConsent from "./cookies/CookieConsent";
 import dummyBlogPosts from "../dummy_data/blogPosts";
 import Routing from "./Routing";
 import smoothScrollTop from "../../shared/functions/smoothScrollTop";
@@ -25,8 +25,10 @@ function Main(props) {
   const [selectedTab, setSelectedTab] = useState(null);
   const [isMobileDrawerOpen, setIsMobileDrawerOpen] = useState(false);
   const [blogPosts, setBlogPosts] = useState([]);
-  const [dialogOpen, setDialogOpen] = useState(null);
-  const [isCookieRulesDialogOpen, setIsCookieRulesDialogOpen] = useState(false);
+  // const [dialogOpen, setDialogOpen] = useState(null);
+  const [, setDialogOpen] = useState(null);
+  // const [isCookieRulesDialogOpen, setIsCookieRulesDialogOpen] = useState(false);
+  const [, ] = useState(false);
 
   const selectHome = useCallback(() => {
     smoothScrollTop();
@@ -46,18 +48,18 @@ function Main(props) {
     setIsMobileDrawerOpen(false);
   }, [setDialogOpen, setIsMobileDrawerOpen]);
 
-  const closeDialog = useCallback(() => {
-    setDialogOpen(null);
-  }, [setDialogOpen]);
+  // const closeDialog = useCallback(() => {
+  //   setDialogOpen(null);
+  // }, [setDialogOpen]);
 
   const openRegisterDialog = useCallback(() => {
     setDialogOpen("register");
     setIsMobileDrawerOpen(false);
   }, [setDialogOpen, setIsMobileDrawerOpen]);
 
-  const openTermsDialog = useCallback(() => {
-    setDialogOpen("termsOfService");
-  }, [setDialogOpen]);
+  // const openTermsDialog = useCallback(() => {
+  //   setDialogOpen("termsOfService");
+  // }, [setDialogOpen]);
 
   const handleMobileDrawerOpen = useCallback(() => {
     setIsMobileDrawerOpen(true);
@@ -67,9 +69,9 @@ function Main(props) {
     setIsMobileDrawerOpen(false);
   }, [setIsMobileDrawerOpen]);
 
-  const openChangePasswordDialog = useCallback(() => {
-    setDialogOpen("changePassword");
-  }, [setDialogOpen]);
+  // const openChangePasswordDialog = useCallback(() => {
+  //   setDialogOpen("changePassword");
+  // }, [setDialogOpen]);
 
   const fetchBlogPosts = useCallback(() => {
     const blogPosts = dummyBlogPosts.map((blogPost) => {
@@ -88,13 +90,13 @@ function Main(props) {
     setBlogPosts(blogPosts);
   }, [setBlogPosts]);
 
-  const handleCookieRulesDialogOpen = useCallback(() => {
-    setIsCookieRulesDialogOpen(true);
-  }, [setIsCookieRulesDialogOpen]);
+  // const handleCookieRulesDialogOpen = useCallback(() => {
+  //   setIsCookieRulesDialogOpen(true);
+  // }, [setIsCookieRulesDialogOpen]);
 
-  const handleCookieRulesDialogClose = useCallback(() => {
-    setIsCookieRulesDialogOpen(false);
-  }, [setIsCookieRulesDialogOpen]);
+  // const handleCookieRulesDialogClose = useCallback(() => {
+  //   setIsCookieRulesDialogOpen(false);
+  // }, [setIsCookieRulesDialogOpen]);
 
   useEffect(fetchBlogPosts, [fetchBlogPosts]);
 

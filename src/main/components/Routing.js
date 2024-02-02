@@ -5,7 +5,8 @@ import PropsRoute from "../../shared/components/PropsRoute";
 import Home from "./home/Home";
 
 function Routing(props) {
-  const { blogPosts, selectBlog, selectHome } = props;
+  // const { blogPosts, selectBlog, selectHome } = props;
+  const { selectHome } = props;
   return (
     <Switch>
       <PropsRoute path="/" component={Home} selectHome={selectHome} />

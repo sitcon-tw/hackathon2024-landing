@@ -9,14 +9,14 @@ import {
   withStyles,
   withWidth,
   isWidthUp,
-  TextField
+  // TextField
 } from "@material-ui/core";
-import PhoneIcon from "@material-ui/icons/Phone";
+// import PhoneIcon from "@material-ui/icons/Phone";
 import FacebookIcon from '@material-ui/icons/Facebook';
 import MailIcon from "@material-ui/icons/Mail";
-import WaveBorder from "../../../shared/components/WaveBorder";
+// import WaveBorder from "../../../shared/components/WaveBorder";
 import transitions from "@material-ui/core/styles/transitions";
-import ColoredButton from "../../../shared/components/ColoredButton";
+// import ColoredButton from "../../../shared/components/ColoredButton";
 
 const styles = theme => ({
   footerInner: {
@@ -88,7 +88,8 @@ const infos = [
 ];
 
 function Footer(props) {
-  const { classes, theme, width } = props;
+  // const { classes, theme, width } = props;
+  const { classes, width } = props;
   return (
     <footer className="lg-p-top">
       <div className={classes.footerInner}>
