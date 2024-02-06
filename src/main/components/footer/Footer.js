@@ -93,8 +93,8 @@ function Footer(props) {
   return (
     <footer className="lg-p-top">
       <div className={classes.footerInner}>
-        <Grid container spacing={isWidthUp("md", width) ? 10 : 5}>
-          <Hidden mdDown>
+        <Grid container spacing={isWidthUp("md", width) ? 4 : 2}>
+          {/* <Hidden mdDown> */}
             <Grid item xs={12} md={4} lg={4} style={{padding:0}}>
               <Box display="flex" justifyContent="center">
                 <div>
@@ -115,7 +115,7 @@ function Footer(props) {
                 </div>
               </Box>
             </Grid>
-          </Hidden>
+          {/* </Hidden> */}
 
           <Grid item xs={12} md={8} lg={4} style={{padding:0}}>
             <Typography variant="h6" paragraph className="text-white">

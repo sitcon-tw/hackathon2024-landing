@@ -47,7 +47,7 @@ const features = [
     color: "#d50000",
     headline: "活動資訊",
     text:
-      "時間：2024/7/6（六）～ 2024/7/7（日）\n地點：待定\n\nSITCON Hackathon 將由主題延伸三項有關社會的子議題，並期望參賽團隊利用外界資源與社群協力，完成專案、實踐社會參與。參賽團隊將在黑客松現場展開為期兩天的密集開發，並於次日的下午進行成果報告。最終由提供資源的單位，評選出具備最佳技術與最佳創意的團隊授予獎項。",
+      "SITCON Hackathon 將由主題延伸三項有關社會的子議題，並期望參賽團隊利用外界資源與社群協力，完成專案、實踐社會參與。參賽團隊將在黑客松現場展開為期兩天的密集開發，並於次日的下午進行成果報告。最終由提供資源的單位，評選出具備最佳技術與最佳創意的團隊授予獎項。",
     icon: <InfoIcon style={{ fontSize: iconSize }} />,
     mdDelay: "0",
     smDelay: "200",
@@ -113,8 +113,12 @@ function FeatureSection(props) {
         <Typography variant="h3" align="center">
           SITCON Hackathon 2024
         </Typography>
-        <Typography variant="body1" align="center" className="lg-mg-bottom" color="textSecondary">
+        <Typography variant="body1" align="center" color="textSecondary" style={{"white-space": "pre-line"}}>
           SITCON 作為台灣學生於資訊領域的入門磚，我們希望透過舉辦 SITCON Hackathon 鼓勵參與者關懷社會議題，並使用外界資源完成專案，同時提供學生、企業與社群等團隊相互砥礪成長的機會。
+        </Typography>
+        <Typography variant="body1" align="center" className="lg-mg-bottom" color="textSecondary" style={{"white-space": "pre-line"}}>
+          時間：2024/7/6（六）～ 2024/7/7（日） <br/>
+          地點：待定 　 　　　　　　　　　　　　
         </Typography>
         <div className="container-fluid">
           <Grid container spacing={calculateSpacing(width)}>

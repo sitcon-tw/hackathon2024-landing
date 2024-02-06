@@ -83,7 +83,7 @@ function NavBar(props) {
             </Typography>
           </div>
           <div>
-            <Hidden mdUp>
+            {/* <Hidden mdUp>
               <IconButton
                 className={classes.menuButton}
                 onClick={handleMobileDrawerOpen}
@@ -91,7 +91,7 @@ function NavBar(props) {
               >
                 <MenuIcon color="primary" />
               </IconButton>
-            </Hidden>
+            </Hidden> */}
             <Hidden smDown>
               {menuItems.map(element => {
                 if (element.link) {
