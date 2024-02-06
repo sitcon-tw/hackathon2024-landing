@@ -38,7 +38,7 @@ function shadeColor(hex, percent) {
 }
 
 function FeatureCard(props) {
-  const { classes, Icon, color, headline, text, data } = props;
+  const { classes, Icon, color, headline, text, data, subtitle } = props;
   return (
     <Fragment>
       <div
@@ -53,15 +53,28 @@ function FeatureCard(props) {
       >
         {Icon}
       </div>
-      <Typography variant="h5" paragraph>
-        {headline}
-      </Typography>
+      { (subtitle) &&
+        (<div>
+        <Typography variant="h5">
+          {headline}
+        </Typography>
+
+        <Typography variant="h6" color="textSecondary" paragraph>
+          {subtitle}
+        </Typography>
+        </div>)
+      }
+      { (!subtitle) &&
+        (<Typography variant="h5" paragraph>
+          {headline}
+        </Typography>)
+      }
       <Typography variant="body1" color="textSecondary" style={{"white-space": "pre-line"}}>
         {text}
       </Typography>
-      { (data && 'link' in data) && (
-          <Typography variant="body1" color="textSecondary">
-            <a href={data.link[1]}>{data.link[0]}</a>
+      { (data && 'link' in data) &&
+          (<Typography variant="body1" color="textSecondary">
+            <a href={data.link[1]} target="_blank" rel="noopener noreferrer">{data.link[0]}</a>
           </Typography>)
       }
       <ul>
