@@ -95,7 +95,7 @@ function HeadSection(props) {
   return (
     <Fragment>
       <ZoomImage
-        src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.jpg`}
+        src={`${process.env.PUBLIC_URL}/images/logged_out/headerImage.png`}
         className={classes.image}
         alt="header example"
         style={{width: "100%"}}
